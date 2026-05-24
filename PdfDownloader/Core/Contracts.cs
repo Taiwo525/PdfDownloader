@@ -16,3 +16,8 @@ public interface IFileStorageService
 {
     Task<string> SaveAsync(string source, string outputDirectory, Stream content, DateTime utcNow, CancellationToken cancellationToken);
 }
+
+public interface ITimeProvider
+{
+    DateTime UtcNow { get; }
+}
